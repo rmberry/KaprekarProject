@@ -27,16 +27,16 @@ int main(int argc, char **argv) {
   int i;
   double percentCorrect;
     
-  for(i=-10; i<=100000; i++) {
+  for(i=1; i<=100000; i++) {
     if(contains(kaprekarNumbers, numKaprekarNumbers, i) != isKaprekar(i)) {
       numWrong++;
       if(contains(kaprekarNumbers, numKaprekarNumbers, i)) {
-	fprintf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
+        fprintf(stderr, "i = %d: is a known Kaprekar number, but the method returned false\n", i);
       } else {
-	fprintf(stderr, "i = %d: is known NOT to be a Kaprekar number, but the method returned true\n", i);
+        fprintf(stderr, "i = %d: is known NOT to be a Kaprekar number, but the method returned true\n", i);
       }
     } else {
-      numCorrect++;
+        numCorrect++;
     }
   }
   printf("Number of tests passed: %d\n", numCorrect);
