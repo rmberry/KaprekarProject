@@ -39,9 +39,9 @@ int isKaprekar(int n) {
     second = square % modulus;
     if(second > 0 &&
        first + second == n) {
-      return 1;
+      return true;
     }
   }
-  return 0;
+  return false;
   
 }
